@@ -21,33 +21,37 @@
 }
 
 .thumbnail {
-  max-width: 30%;
+  max-width: 40%;
   padding: 10px;
-  background-color: white;
-  margin: 0px 20px;
+  background-color: #fff;
+  margin: 0px 10px;
 }
 
 .thumbnail img {
   border: 1px solid #c3c3c3;
 }
 
-p.large {
-  margin-bottom: 40px;
-}
-.large {
+.jumbotron p {
   font-size: 24px;
 }
 
-.large a ,
-p.large>.em {
+.jumbotron a ,
+.jumbotron>.em {
   font-size: 36px;
-   zcolor: #a3a3a3;
    font-weight: bolder;
    line-height: 20px;
-   color: #F52365; F16D96; #777;
+   color: #777; F52365; F16D96; #777;
 }
 
+.decoration {
+  width: 100%;
+}
 
+.decoration img {
+  display: block;
+  margin: 30px auto;
+  width: 30px;
+}
 
 html, body {
   height: 100%;
