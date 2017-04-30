@@ -70,6 +70,7 @@ var cardClicked = function(){
 		// Mark the card as active, as in, it's in play.
 		$card.find(".card").addClass("active");
 
+
 		// If there is no other active card, mark this as the card_to_match
 		if(!card_to_match){
 			card_to_match = $(this).attr("data-id");

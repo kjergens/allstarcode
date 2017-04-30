@@ -129,7 +129,7 @@ html, body {
           transform-style: preserve-3d;
   -webkit-transition: .6s ease-in-out;
   transition: .6s ease-in-out;
-  background-color: white;
+  zbackground-color: white;
   border-radius: 5px;
 }
 
@@ -172,12 +172,13 @@ html, body {
 
 .card_container .card .card_back {
   border: 5px solid #F16D96;
+  background-color: white; 
   padding: 50px;
 }
 
 .card_face {
 	background-color: white; 
-	zborder: 2px solid #c3c3c3;
+	zborder: 20px solid #c3c3c3;
 }
 
 @media (max-width: 800px) {
