@@ -2,6 +2,8 @@
 var card_to_match;
 var turns;
 var win = false;
+var cardset;
+var allcards;
 
 var setup = function() {
 
@@ -15,12 +17,14 @@ var setup = function() {
 	turns = 0;
 	win = false;
 
+	cardset = cardset.concat(cardset); // make doubles
+
 	// Shuffle the array of cards
-	this.$cards = $(shuffleCards(cards));
+	this.$cardset = $(shuffleCards(cardset));
 
 	// Arrange the cards on the board
 	var board = '';
-	this.$cards.each(function(key, val){
+	this.$cardset.each(function(key, val){
 		board += '<div class="card_container" data-id="'+ val.id +'"><div class="card">\
 		<div class="card_face"><img src="'+ val.img +'"\
 		alt="'+ val.name +'" /></div>\
@@ -34,6 +38,12 @@ var setup = function() {
 	// Bind event handlers
 	$(".card_container").on("click", cardClicked);
 	$(".close").on("click", closeModal);
+
+   $('#easy').click(function () {
+    	console.log("Easy");
+    	cardset = allcards.slice(0,4);
+    	setup();
+  });
 
 	// Reveal
 	$(".game").show("slow");
@@ -120,7 +130,7 @@ var closeModal = function() {
 	$(".modal").fadeOut();
 }
 
-var cards = [
+var allcards = [
 	{
 		name: "chilled",
 		img: "img/chilled.png",
@@ -154,9 +164,9 @@ var cards = [
 
 ];
     
-// Setup 
+// On load 
 $(function(){
-	$.merge(cards, cards);
+	cardset = allcards.slice(); // default cardset
 	
 	setup();
 

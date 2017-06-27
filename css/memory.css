@@ -82,6 +82,10 @@ html, body {
     z-index: 99999;
 }
 
+.difficulty {
+  display: none;
+}
+
 .modal {
   display: none;
   position: relative;
