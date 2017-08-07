@@ -1,6 +1,8 @@
 .btn-weapon {
 	height: 200px;
 	width: 200px;
+	border: 10px solid #efefef;
+	border-radius: 3px;
 }
 
 #rock-btn {
