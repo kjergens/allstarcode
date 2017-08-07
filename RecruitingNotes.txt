@@ -1,0 +1,150 @@
+
+Yahoo Guest Speaker: Doug DeSimone, Oath Talent Acquistion Team
+---------------------------------------------------------------
+
+Avoid the resume black hole
+----------------------------
+Often, out of 500 applicants, just 1 person gets the job. 
+
+Tips:
+- Include links to apps you developed (e.g. App Store)
+- Include links to GitHub repos (even small projects)
+- use HackerRank
+
+Get there first
+ - 80% hires are from first 20% applicants
+ - use Indeed.com alerts
+
+
+Connect with Recruiter or Hiring Manager on LinkedIn
+ - Send short message. e.g.:n"I just applied for job #333. Would love to hear how I can talk to the right person." 
+ - Be proactive. Recruiter likes it when people reach out directly.
+
+Get referred!
+
+Type of referral and the Screened-to-Hired ratio
+----------------------------------------------
+Trusted referral 5:1 
+Employee referral 12:1
+Direct sourced (recruiter found you because your skills match) 50:1 
+Rank and File apply 125:1
+Top Tier apply (usually don't apply for top-tier jobs, you'd get promoted) >250:1
+
+
+Interviews (Moving down the funnel)
+-------------------------------------
+
+From the recruiter's point of view:
+
+Phone screen or video chat
+- Do they have basic skills?
+- Should we bring them onsite for interview?
+
+Onsite Interview
+- Can you do it?
+	- Knowledge, experience, competencies (skills and behavior)
+- Will you do it?
+	- Motivations
+- Can we work together?
+	- Drivers - your values
+	- Traits - natural tendencies e.g. assertiveness or risk taking
+
+
+
+Phone screen
+-------------
+Communication is non-verbal, so on a phone screen, be conscious of not talking to fast, being articulate, listen for the question before you start to answer. 
+Have a list of questions to ask interviewers.
+
+
+On-site
+----------
+
+Interview Questions
+Group A - not useful
+ - Tell me about yourself
+ - Describe last job
+
+ Group B - not useful
+  - If you were shrunk to the size of a nickel, put in a blender and told the blades would start spinning on one minute, what would you do?
+  (Trick/creative questions are falling out of fashion)
+
+ Group C (Behavioral Question - past as predictor of future)
+ - Did you ever fail to meet a deadline? What happened and why?
+ - Describe a time you had to deal with a difficult customer or coworker.
+ - What has been your biggest challenge in your professional career so far?
+
+ STAR (Situation, Task, Action, Results) Questions
+ Creativity/Innovativeness
+ * What innovation procedures have you developed? How? Who was involved? What change did they make?
+
+ Evaluating Past Performace
+ * Once major prpblem we're now facing is ____. What have you don that is the most similar? How would you go about it?
+
+ Judgement, Negoitation Skills, Persuasiveness, Resolving Conflict, Development People, Leadership, Customer Orientation
+
+
+Really looking for learners, people who can grow.
+
+
+Typical Career Path
+---------------------
+Expect twists and turns.
+Recommendation: Steve Jobs commencement speech to Stanford 2005. Read it (don't watch the video).
+Try a bunch of stuff.
+Don't be afraid to experiment.
+Jobs vs. Career
+Job is like a subway stop. Career is the subway line.
+
+Where are you going?
+Are you running away from something or running to something? Recruiter making sure you know what you want.
+
+
+What do I like to do? (Interests)
+What is available? (Opportunities)
+What am I good at? (Skills)
+...The sweet spot is the overlap of these 3.
+
+
+Summary
+-----------
+Recruiters are overwhelmed with resumes
+Create a compelling profile
+Avoid the black hole of resumes
+Understand the types of interview questions
+Experiemnt with different job types
+Have a forward looking story.
+
+
+Q&A
+----
+How to start a start-up 
+- Steven Blank has entrepreunership class at Stanford.
+
+How often stay connected to people after you leave a company? 
+- Often.
+
+Resume length
+- No 5-page resumes! A recruiter will spend 6 seconds on a resume.
+Don't be funny on your resume.
+Showing is better than telling - links to github, etc.
+
+Does school matter for a job (community college vs. ivy league) ? 
+- After 4 years in the workforce your school/GPA has no bearing on career. Experience matters more. Halo effect (bias towards reputable schools) is stronger in early career. 
+Some companies have GPA cut-offs.
+
+How improve chances of getting resume seen
+Oath has an applicant-tracking system (automated resume-reader)
+They look back at old resumes in the system.
+
+
+Connect on LinkedIn
+----------------------
+https://www.linkedin.com/in/desimone/ (Doug DeSimone)
+
+https://www.linkedin.com/in/sllimerem (Meredith Mills)
+
+
+
+
+

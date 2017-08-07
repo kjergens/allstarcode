@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div id="random-user"></div>
+
+<!-- <img src="https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/dog-medium-landing-hero.ashx"> -->
+
+
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">  	
+</script>
+
+    <script type="text/javascript">
+
+    var keyword = "mountains";
+
+    $(document).ready(function(){
+
+        // $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        // {
+        //     tags: keyword,
+        //     tagmode: "any",
+        //     format: "json"
+        // },
+        // function(data) {
+        //     var rnd = Math.floor(Math.random() * data.items.length);
+
+        //     var image_src = data.items[rnd]['media']['m'].replace("_m", "_b");
+
+        //     $('body').css('background-image', "url('" + image_src + "')");
+
+        // });
+
+        $.getJSON("https://randomuser.me/api/",
+        	
+        function(data) {
+		  	console.log(data.results)
+		    $("#random-user").append("<img src='"+data.results[0].picture.large+"'>");
+		    $("#random-user").append("<div>"+data.results[0].name.first+" "+data.results[0].name.last+"</div>");
+		    $("#random-user").append("<div>"+data.results[0].email+"</div>");
+
+    	});
+    })
+    </script>
+
+<script>
+
+
+// $.ajax({
+//   url: 'https://randomuser.me/api/',
+//   success: function(data) {
+//   	console.log(data.results)
+//     $("#random-user").append("<img src='"+data.results[0].picture.large+"'>");
+//     $("#random-user").append("<div>"+data.results[0].name.first+" "+data.results[0].name.last+"</div>");
+//     $("#random-user").append("<div>"+data.results[0].email+"</div>");
+//   }
+// });	
+
+
+</script>
+	
+</body>
+</html>
