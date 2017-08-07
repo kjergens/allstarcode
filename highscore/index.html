@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Custom CSS -->
     <style>
@@ -47,19 +48,23 @@
                 <a class="navbar-brand" href="#">Rock Paper Scissor (High Score Version)</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-  <!--           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <div id="initials-form">
+       
+                <input class="form-control" id="initialsInput" type="text" placeholder="Your initials">
+                <button class="btn btn-default" onclick="getInitials()">Add</button>
+            </div>
                     </li>
-                    <li>
+<!--                     <li>
                         <a href="#">Services</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
-            </div> -->
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -70,25 +75,32 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <input id="initialsInput" type="text" placeholder="Your initials">
-                <button onclick="getInitials()">Add</button>
-
+               
                 <h1 id="welcome"></h1>
+                <h2>Pick your fighter</h2>
 
-                <button onclick="rockSelected()" id="rock-btn">Rock</button>
-                <button onclick="paperSelected()" id="paper-btn">Paper</button>
-                <button onclick="scissorsSelected()"  id="scissors">Scissors</button>
+                <button class="btn-weapon btn btn-default" onclick="rockSelected()" id="rock-btn"></button>
+                <button class="btn-weapon btn btn-default" onclick="paperSelected()" id="paper-btn"></button>
+                <button class="btn-weapon btn btn-default" onclick="scissorsSelected()"  id="scissors-btn"></button>
 
-                <h2 id="player-weapon"></h2>
-                <h2 id="computer-weapon"></h2>
-                <h2 id="who-won"></h2>
-                <p id="score"></p>
+                <div class="choices">
+                    <h3 id="player-weapon"></h2>
+                    <h3 id="computer-weapon"></h3>
+                </div>
 
-                <button onclick="save()">Save & Reset</button>
+                <div id="result_container">
+                <p id="description"></p>
+                <div id="who-won"></div>
+                 <p id="score"></p>
+                </div>
 
+               
+
+                <button class="btn btn-default" onclick="save()">Save & Reset Score</button>
+
+                <div id="leaderboard_container">
                 <h2>Leaderboard</h2>
-                <div id="leaderboard">
-                    
+                <ul class="list-group" id="leaderboard"></ul>
                 </div>
 
             </div>

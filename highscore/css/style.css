@@ -1,0 +1,55 @@
+.btn-weapon {
+	height: 200px;
+	width: 200px;
+}
+
+#rock-btn {
+	background-image: url('../img/kevin.png')
+}
+
+#paper-btn {
+	background-image: url('../img/mahdi1.png')
+}
+
+#scissors-btn {
+	background-image: url('../img/roger.png')
+}
+
+.choices {
+	display: flex;
+	justify-content: center;
+}
+
+#initials-form {
+	display: flex;
+	justify-content: flex-end;
+	width: 200px;
+	margin-top: 10px;
+}
+
+#result_container {
+	background: #fff;
+	padding: 20px 10px;
+	border-radius: 2px;
+	margin: 10px;
+
+}
+
+#description {
+	font-size: 18px;
+}
+
+#who-won {
+	font-size: 45px;
+}
+
+#leaderboard {
+	width: 300px;
+	margin: 0 auto;
+}
+
+#player-weapon, #computer-weapon {
+	margin: 20px 3px;
+	font-size: 18px;
+}
+
