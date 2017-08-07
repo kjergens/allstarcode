@@ -31,9 +31,10 @@
 
 #result_container {
 	background: #fff;
-	padding: 20px 10px;
+	padding: 12px 7px;
 	border-radius: 2px;
-	margin: 10px;
+	margin: 10px auto;
+	width: 600px;
 
 }
 
@@ -42,7 +43,7 @@
 }
 
 #who-won {
-	font-size: 45px;
+	font-size: 40px;
 }
 
 #leaderboard {
