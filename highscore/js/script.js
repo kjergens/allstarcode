@@ -50,6 +50,8 @@ function finishTurn() {
 
 function setComputerWeapon() {
 	computerWeapon = weapons[Math.floor(Math.random()*weapons.length)];
+
+	// Avoid ties
 	while (computerWeapon === playerWeapon) {
 		computerWeapon = weapons[Math.floor(Math.random()*weapons.length)];
 	}
@@ -70,22 +72,28 @@ function setComputerWeapon() {
 
 
 
-
+// There are no ties in this game
 function determineWinner() {
 
 	let oldScore = score;
 
 	if(playerWeapon==='Kevin') {
 		if(computerWeapon==='Roger') {
-			score++;
-		} 
+			score+=1;
+		} else {
+			score-=1;
+		}
 	} else if (playerWeapon==='Mahdi') {
 		if (computerWeapon==='Kevin') {
-			score++;
+			score+=2;
+		} else {
+			score-=2;
 		}
 	} else if (playerWeapon==='Roger') {
 		if (computerWeapon==='Mahdi') {
-			score++;
+			score+=1;
+		} else {
+			score-=1;
 		}
 	}
 
@@ -99,12 +107,7 @@ function determineWinner() {
 		$("#who-won").text("You lose.")
 		$("#result_container").css("background-color", "#e0b2b2")
 		$("#result_container").css("color", "#990000")
-	} else {
-		$("#description").text('')
-		$("#result_container").css("background-color", "#eee")
-		$("#result_container").css("color", "#333")
-		$("#who-won").text("Tie.")
-	}
+	} 
 
 	$("#score").text("Your score: "+score);
 
@@ -113,8 +116,6 @@ function determineWinner() {
 
 //button executes this function
 function save(){
-
-	getInitials();
 
 	if (initials.length === 0) {
 		$("#save-info").text("Please enter your initials.")
@@ -137,21 +138,9 @@ function save(){
 
 database.orderByChild("SCORE").limitToLast(10).on("child_added", function(rowData) {
   		let line = rowData.val().INITIALS + " got " + rowData.val().SCORE + " points.";
-  		//$("#leaderboard").append("<div>"+line+"</div>");
 
   		// Write top score at top
   		let board=`<li class="list-group-item">${line}</li>`+$("#leaderboard").html();
   		$("#leaderboard").html(board);
 });
 
-
-
-// database.on("child_added",  function(rowData) {
-// 	// row is same as object we pushed
-// 	var row = rowData.val();
-
-// 	console.log(row); // debugging
-
-// 	$("#leaderboard").append("<div><em>"+row.INITIALS+' got</em> : '+row.SCORE+"</div>");
-
-// })
