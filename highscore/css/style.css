@@ -3,6 +3,22 @@
 	width: 200px;
 	border: 10px solid #efefef;
 	border-radius: 3px;
+	transition: border .75s ease;
+}
+
+.nav-elements{
+	display: flex;
+	justify-content: space-between;
+}
+
+#welcome {
+	color: #9c9c9c;
+	margin: 15px;
+	font-size: 18px;
+}
+
+.btn-weapon:hover{
+	opacity: .8;
 }
 
 #rock-btn {
@@ -35,15 +51,19 @@
 	border-radius: 2px;
 	margin: 10px auto;
 	width: 600px;
+	transition: background-color .75s ease;
 
-}
-
-#description {
-	font-size: 18px;
 }
 
 #who-won {
-	font-size: 40px;
+	font-size: 36px;
+}
+
+#leaderboard_container {
+	background-color: #3a3a3a;
+	color: white;
+	margin-top: 30px;
+	padding-bottom: 100px;
 }
 
 #leaderboard {
@@ -51,8 +71,16 @@
 	margin: 0 auto;
 }
 
-#player-weapon, #computer-weapon {
+#leaderboard li{
+	color: #1a1a1a;
+}
+
+#player-weapon, #computer-weapon, #description {
 	margin: 20px 3px;
 	font-size: 18px;
 }
 
+#save-info {
+	font-style: italic;
+	margin-top: 10px;
+}

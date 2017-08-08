@@ -36,7 +36,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+        <div class="container-fluid nav-elements">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,16 +51,17 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <div id="initials-form">
-       
-                <input class="form-control" id="initialsInput" type="text" placeholder="Your initials">
-                <button class="btn btn-default" onclick="getInitials()">Add</button>
-            </div>
-                    </li>
-<!--                     <li>
-                        <a href="#">Services</a>
+                    <div id="initials-form">
+<!--                         <form onsubmit="getInitials()">
+ -->                            <input class="form-control" id="initialsInput" type="text" placeholder="Your initials">
+                       <a class="btn btn-default" onclick="getInitials()">Add</a>
+<!--                     </form>
+ -->                    </div>
                     </li>
                     <li>
+                        <p id="welcome">Welcome</a>
+                    </li>
+ <!--                    <li>
                         <a href="#">Contact</a>
                     </li> -->
                 </ul>
@@ -71,44 +72,54 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col-lg-12 text-center">
+
+                <div id="result_container">
+                <div id="who-won"></div>
+                 <p id="score"></p>
+                </div>
                
-                <h1 id="welcome"></h1>
-                <h2>Pick your fighter</h2>
+                <div class="choices">
+                    <div id="player-weapon"></div>
+                    <div id="computer-weapon"></div>
+                    <div id="description"></div>
+                </div>
+
+                <div class="weapon-container">
 
                 <button class="btn-weapon btn btn-default" onclick="rockSelected()" id="rock-btn"></button>
                 <button class="btn-weapon btn btn-default" onclick="paperSelected()" id="paper-btn"></button>
                 <button class="btn-weapon btn btn-default" onclick="scissorsSelected()"  id="scissors-btn"></button>
 
-                <div class="choices">
-                    <h3 id="player-weapon"></h2>
-                    <h3 id="computer-weapon"></h3>
-                </div>
+                 <p><em>Pick your fighter</em></p>
 
-                <div id="result_container">
-                <p id="description"></p>
-                <div id="who-won"></div>
-                 <p id="score"></p>
-                </div>
+                 </div>
 
-               
-
-                <button class="btn btn-default" onclick="save()">Save & Reset Score</button>
-
-                <div id="leaderboard_container">
-                <h2>Leaderboard</h2>
-                <ul class="list-group" id="leaderboard"></ul>
-                </div>
+                <button class="btn btn-primary" onclick="save()">Save & Reset Score</button>
+                <p id="save-info"></p>
 
             </div>
+             <!-- /.col -->
+
         </div>
         <!-- /.row -->
+       
+        <div class="row" id="leaderboard_container">
+            <div class="col-lg-12 text-center">
+                <h2>Leaderboard</h2>
+                <ul class="list-group" id="leaderboard"></ul>
+            </div>
+            <!-- /.col -->
+        </div>
+         <!-- /.row -->
 
     </div>
     <!-- /.container -->
+
+
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
