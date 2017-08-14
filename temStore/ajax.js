@@ -1,50 +1,95 @@
-function setup(){
-    // productName="Samsung";
-    // $.getJSON("https://price-api.datayuge.com/api/v1/compare/?apikey=RzQF3I2gTT7N4iWvBO3SKc1MUhy3t0JiGKZ&product="+productName,
-        
-    //     function(data) {
-    //         console.log(data);
-            
-    //     });
-    $.getJSON(
-      "https://price-api.datayuge.com/api/v1/compare/detail?id=ZToxMjIyNA&api_key=TLHyGyOHvYVRxIeEgubFti0thQPGSMLHeeU",
-      function(data) {
-            console.log(data);
-          var info = data.data
-          let nem = info.product_name
-          let price = info.product_lowest_price;
-          let imag = info.product_images[0];
-          let retailer= info.product_lowest_price;
-          let plist= info.stores;
-          for (p of plist){
-            for (str in p) {
-              if (p[str].product_store) {
-                $('.Products').append(
-                    `<div class = "card">
-                      <div class="card-image">
-                        <img class = "prod_img" src="${imag}">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title black-text">${nem}</span>
-                        <p><i class="material-icons">add</i>${p[str].product_price}</p> 
-                        <img src="${p[str].product_store_logo}">          
-                    </div>`
-                  )
-                }
-            }   
-          }
-      }
-    )
+var shoppingCart = [];
+
+addItem = (item) => {
+  shoppingCart.push(item)
+  $(".items").append(`<li>${item}</li>`)
 }
 
-$(document).ready(setup);
-// var unirest = require('unirest');
+searchItem = () => {
 
-// $(document).ready(function(){
-//     unirest.get("https://datayuge-price-comparison-india-v1.p.mashape.com/search.php?product=Iphone+6+s")
-//     .header("X-Mashape-Key", "zdvo8ktKzOmshXEBASdh4X6l7ZP2p1uEzX3jsnxFDZjl3zx8OM")
-//     .header("Accept", "application/json")
-//     .end(function (result) {
-//   console.log(result.status, result.headers, result.body);
-// });
-// })
+    console.log("Searching for...")
+
+    let productName=$("#search")[0].value; // get the new product to search
+
+    $(".products").html("")  // clear old results
+
+    // Get all products that match the search term
+    $.getJSON(`https://price-api.datayuge.com/api/v1/compare/search?product=${productName}&api_key=TLHyGyOHvYVRxIeEgubFti0thQPGSMLHeeU`,
+        function(dataRow) {
+
+          console.log(dataRow.data)
+
+          let productList = dataRow; 
+
+          // Look up details for all the products that get returned
+          for(row in productList) {
+              console.log(row)
+              for (r in row) {
+                if (productList[row][r]) { // skip undefined rows
+                  console.log("Processing "+productList[row][r].product_title) // debuggning purposes
+
+                  let id=productList[row][r].product_id // Get each product id
+
+                  $.getJSON(
+                    `https://price-api.datayuge.com/api/v1/compare/detail?id=${id}&api_key=TLHyGyOHvYVRxIeEgubFti0thQPGSMLHeeU`,
+                    function(data) {
+                        console.log(data);
+                        var info = data.data
+                        let nem = info.product_name
+                        let price = info.product_lowest_price;
+                        let imag = info.product_images[0];
+                        let lowest= info.product_lowest_price;
+                        let plist= info.stores;
+                        for (p of plist){
+                          for (str in p) {
+                            if (p[str].product_store) {
+
+                              // Check if this has the lowest price
+                              let lowPriceAlert = "";
+                              if (lowest === p[str].product_price) {
+                                lowPriceAlert = "LOWEST PRICE";
+
+                               }
+
+
+                              // Add product to page 
+                              $('.products').append(
+                                  `<div class = "card">
+                                    <div class="card-image">
+                                      <img class = "prod_img" src="${imag}">
+                                    </div>
+                                    <div class="card-content">
+                                      <span class="card-title black-text">${nem}</span>
+                                       <span class="rating" data-stars="5" data-default-rating="2.5"></span>
+                                      <p><i class="material-icons">attach_money</i>${p[str].product_price}</p> 
+                                      <p>${lowPriceAlert}</p>
+                                      <img src="${p[str].product_store_logo}">  
+                                      </div>
+                                      <div class="card-action">
+                                      <a onClick="addItem('${nem}')"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+                                    </div>        
+                                  </div>`
+                                )
+                            } // end if p[str].product_store
+                          } // end str in p  
+                        } // end p in plist
+                    } // end function(data)
+                  ) // end getJSON
+              } // end if dataRow[row][r]
+            } // end for r of row
+      } // end for row of rowData 
+   }// end function(dataRow)
+  ) // end getJSON
+} // end searchItem()
+
+$(document).ready( () => {
+  $(".products").html("<h2>Search for anything.</h2>")
+
+  $("#search-form").submit(function( event ) {
+    event.preventDefault();
+    searchItem();
+  });
+
+});
+
+

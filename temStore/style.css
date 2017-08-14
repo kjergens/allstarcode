@@ -1,9 +1,33 @@
-.Products .card{
+.products .card{
   width:250px;
   padding: 30px;
 } 
 
-.Products {
+
+.products {
   display:flex;
   flex-flow: row wrap;
 }
+
+/*.rating {
+  display: block;
+  border: 2px solid red;
+  padding 20px;
+}
+*/
+.shopping-cart {
+  padding: 20px 10px;
+  position: relative;
+  left: -50px;
+}
+
+/* Move search icon up. It's too low. */
+/*.input-field input[type=search]+label{
+  top: -10px;
+}*/
+
+
+/* Make search icon (and all nav icons) bigger) */
+/* nav i.material-icons {
+  font-size: 30px;
+}*/
