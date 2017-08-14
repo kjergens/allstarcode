@@ -15,18 +15,14 @@ searchItem = () => {
 
     // Get all products that match the search term
     $.getJSON(`https://price-api.datayuge.com/api/v1/compare/search?product=${productName}&api_key=TLHyGyOHvYVRxIeEgubFti0thQPGSMLHeeU`,
-        function(dataRow) {
-
-          console.log(dataRow.data)
-
-          let productList = dataRow; 
+        function(productList) { 
 
           // Look up details for all the products that get returned
           for(row in productList) {
-              console.log(row)
+
               for (r in row) {
                 if (productList[row][r]) { // skip undefined rows
-                  console.log("Processing "+productList[row][r].product_title) // debuggning purposes
+                  console.log("Processing "+productList[row][r].product_title) // debugging purposes
 
                   let id=productList[row][r].product_id // Get each product id
 
