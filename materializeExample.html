@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Materialize Example</title>
+
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+  <style>
+
+  	.brand-logo .material-icons {
+  		font-size: 50px;
+  	}
+
+	/* chevrons */
+  	.breadcrumb:before {
+    	color: #5a5a5a;
+    	font-size: 20px;
+	}
+
+	/* text */
+	.breadcrumb, .breadcrumb:last-child {
+   		color: #0083c7;
+   		font-size: 13px;
+	}
+
+	/* active */
+	.breadcrumb:last-child {
+   		color: #5a5a5a;
+	}
+
+	nav+.breadcrumbs{
+		line-height: 22px;
+		box-shadow: 0 0 0 0;
+	}
+
+	.inventory {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+	}
+
+	.card  {
+		width: 200px;
+		margin: 2px; 
+	}
+
+
+nav .input-field label {
+	top: 20px;
+	}
+
+	.searchbar {
+		margin-bottom: 20px;
+	}
+
+  </style>
+          
+</head>
+<body>
+
+    <!-- Navbar goes here add_shopping_cart-->
+  	<nav class="teal">
+	    <div class="nav-wrapper">
+	       
+	      <a href="#" class="brand-logo"> <i class="large material-icons">palette</i>The ShopOwl</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="#!"><i class="material-icons left">shopping_cart</i>My Cart <span class="new badge">4</span></a></li>
+	        <li><a href="#"><a href="#"><i class="material-icons left">info</i>Get Help</a></li>
+        <li><a href="sass.html"><i class="material-icons left">settings</i>My Account</a></li>
+	      </ul>
+
+	   <!-- <form class="center-align">
+        <div class="input-field inline">
+          <input id="search" type="search" required placeholder="Search...">
+          <label for="search"><i class="material-icons large">search</i></label>
+        </div>
+      </form> -->
+
+	    </div>
+
+  	</nav>
+
+
+      <nav class="searchbar #212121 grey darken-4 white-text">
+	    <div class="nav-wrapper">
+	          <form>
+        <div class="input-field">
+          <input id="search" type="search" required placeholder="I want to find the cheapest...">
+          <label for="search"><i class="material-icons large">search</i></label>
+        </div>
+      </form>
+	    </div>
+
+  	</nav>
+
+
+
+<!--   	  <nav class="#e0e0e0 grey lighten-2">
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="large material-icons">search</i>Search</label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav> -->
+
+<!-- <nav class="clean white breadcrumbs">
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a href="#!" class="breadcrumb">Electronics</a>
+      <a href="#!" class="breadcrumb">Home</a>
+      <a href="#!" class="breadcrumb">Vacuums</a>
+      <a href="#!" class="breadcrumb active">Utility</a>
+    </div>
+  </div>
+</nav> -->
+
+    <!-- Page Layout here -->
+    <div class="row">
+
+
+<!--       <div class="col s2">
+Filter By
+      <form action="#">
+    <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">Handheld</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test6" checked="checked" />
+      <label for="test6">Power Vacuum</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test7" />
+      <label for="test7">Filtered</label>
+    </p>
+    <p>
+      <input type="checkbox" id="indeterminate-checkbox" />
+      <label for="indeterminate-checkbox">Used</label>
+    </p>
+    <p>
+      <input type="checkbox" id="test7" />
+      <label for="test7">Cordless</label>
+    </p>
+
+  </form>
+
+      <ul class="collection">
+      <li class="collection-item"><a href="#">Groceries</a></li>
+      <li class="collection-item"><a href="#">Home</a></li>
+      <li class="collection-item"><a href="#">Office</a></li>
+      <li class="collection-item"><a href="#">Entertainment</a></li>
+      <li class="collection-item"><a href="#">Electronics</a>
+		<ul>
+     		<li class="collection-item"><a href="#">Computer</a></li>
+      		<li class="collection-item"><a href="#">Game Consoles</a></li>
+      		<li class="collection-item"><a href="#">Tools</a></li>
+		</ul>
+      </li>
+      <li class="collection-item"><a href="#">Toys & Games</a></li>
+    </ul>
+      </div> -->
+
+      <div class="col s10 inventory">
+        <!-- Teal page content  -->
+       	<div class="card">
+        <div class="card-image">
+          <img src="http://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Appliances/Vacuum_and_Floor_Cleaners/wet-dry-vacuum-v2.jpg">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+
+       	<div class="card">
+        <div class="card-image">
+          <img src="http://freebies2deals.com/wp-content/uploads/2016/01/Screen-Shot-2016-01-20-at-7.59.27-AM.png">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+
+          	       	<div class="card">
+        <div class="card-image">
+          <img src="http://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Appliances/Vacuum_and_Floor_Cleaners/wet-dry-vacuum-v2.jpg">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+
+        <!-- Teal page content  -->
+        	<div class="card">
+        <div class="card-image">
+          <img src="https://evacuumstore.com/images/category/large/199.jpg">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+
+       	<div class="card">
+        <div class="card-image">
+          <img src="http://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Appliances/Vacuum_and_Floor_Cleaners/wet-dry-vacuum-v2.jpg">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+       	<div class="card">
+        <div class="card-image">
+          <img src="http://www.homedepot.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Appliances/Vacuum_and_Floor_Cleaners/wet-dry-vacuum-v2.jpg">
+        </div>
+        <div class="card-content">
+                  <span class="card-title black-text">Card Title</span>
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                         <p><i class="material-icons">attach_money</i>15.99</p>
+        </div>
+                    <div class="card-action">
+              <a href="#"><i class="material-icons">add_shopping_cart</i>Add to cart</a>
+            </div>
+      </div>
+      </div>
+
+
+      <div class="col s2">
+		<p>Summary</p>
+		<p>4 items</p>
+		<p>Total: $67.09</p>
+        <a href="cart.html" class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Quick Pay</a>
+
+      </div> 
+     
+
+    </div>
+
+            <footer class="page-footer teal">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+	
+</body>
+</html>
