@@ -1,33 +1,31 @@
+/* Make sure each product isn't too big. */
 .products .card{
   width:250px;
   padding: 30px;
 } 
 
-
+/* Make products go next to each other and wrap around at end of the line. */
 .products {
   display:flex;
   flex-flow: row wrap;
 }
 
-/*.rating {
-  display: block;
-  border: 2px solid red;
-  padding 20px;
-}
-*/
-.shopping-cart {
-  padding: 20px 10px;
-  position: relative;
-  left: -50px;
-}
 
-/* Move search icon up. It's too low. */
+/* Move search icon up. It's too low by default. */
 .input-field input[type=search]+label{
   top: -10px;
 }
 
 
-/* Make search icon (and all nav icons) bigger) */
+/* Make search icon (and all nav icons) bigger */
  nav i.material-icons {
   font-size: 30px;
+}
+
+
+/* Keep shopping list always in view */
+.row .col.s2.shopping-cart {
+  position: fixed;
+  top: 130px;
+  right: 0;
 }
