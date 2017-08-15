@@ -96,6 +96,25 @@ $(document).ready( () => {
     searchItem();
   });
 
+  /* Wire up the modal */
+    $('.modal').modal({
+      /* At the start, fill the items list */
+      ready: function(modal, trigger) { 
+        for (item of shoppingCart) {
+          $(".items-to-ship").append(`<p>${item}</p>`)
+        }
+      }, // end Callback for Modal open. Modal and trigger parameters available
+
+      /* When done, empty the shopping cart*/
+      complete: function() { 
+        // Empty shopping cart
+        $(".items-to-ship").html("")
+        shoppingCart = []
+        $(".items").html("")
+      } // end Callback for Modal close
+    }
+  );
+
 });
 
 

@@ -39,11 +39,79 @@
           <a href="index.html">Clear list and start over</a>
           <ol class="items">
           </ol>
-          <a href="shopping_cart.html" class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Check out</a>
+          <a href="#modal1" class="waves-effect waves-light btn modal-trigger"><i class="material-icons left">payment</i>Check out</a>
 
 
         </div>
       </div>
+
+   <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+      <h5>Item(s) to Ship</h5>
+        <div class="col s12">
+          <div class="items-to-ship"></div>
+        </div>
+      </div>
+   
+
+      <div class="row">
+       <h5>Shipping Details</h5>
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s5">
+          <input id="street" type="text" class="validate">
+          <label for="street">Street Address</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="city" type="text" class="validate">
+          <label for="city">City</label>
+        </div>
+        <div class="input-field col s2">
+          <input id="zip" type="text" class="validate">
+          <label for="zip">Zip code</label>
+        </div>
+         <div class="input-field col s2">
+          <input id="country" type="text" class="validate">
+          <label for="country">Country</label>
+        </div>
+      </div> <!- end of row -->
+      
+      <div class="row">
+      <h5>Payment Method</h5>
+        <div class="input-field col s1">
+          <input id="cc_name" type="text" class="validate">
+          <label for="cc_name">Card Type</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="cc_num" type="text" class="validate">
+          <label for="cc_num">Credit Card Number</label>
+        </div>
+        <div class="input-field col s1">
+          <input id="exp" type="text" class="validate">
+          <label for="exp">Expiration</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Name on Card</label>
+        </div>
+      </div> <!- end of row -->
+
+      </div> <!- end of row -->
+    </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Complete Payment</a>
+    </div>
+  </div>
   </body>
 </html>
 
